@@ -1,0 +1,1248 @@
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: transparent;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow: visible !important;
+}
+
+.logo-size-iraq {
+  height: auto;
+  width: clamp(60px, 10vw, 120px);
+  padding: 0;
+  margin: 0;
+}
+.logo-size-codeavour {
+  height: auto;
+  width: clamp(100px, 15vw, 200px);
+  padding: 0;
+  margin: 0;
+}
+
+.section-container {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  margin-bottom: clamp(1.5rem, 5vw, 3rem);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: auto;
+}
+
+.section-container:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+}
+
+.glass-header {
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.glass-footer {
+  background-color: rgba(95, 43, 126, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 1.5vw + 0.8rem, 1.8rem);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #5f2b7e;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+  width: 70%;
+}
+
+.download-btn {
+  transition: all 0.3s ease;
+  background-color: rgba(95, 43, 126, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: clamp(0.5rem, 1vw + 0.3rem, 1rem) clamp(1rem, 2vw + 0.5rem, 2rem);
+  font-size: clamp(0.8rem, 1vw + 0.4rem, 1rem);
+  width: min(100%, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  background-color: rgba(133, 67, 175, 0.9);
+}
+
+.profile-image-container {
+  box-shadow: none;
+}
+
+.hero-pattern {
+  background-image: url("assets/pattern.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  mix-blend-mode: soft-light;
+  position: relative;
+  overflow: hidden;
+}
+
+.pattern-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/pattern.png");
+  background-size: cover;
+  background-position: center;
+  animation: pattern-zoom 15s ease-in-out infinite alternate;
+}
+
+.pattern-animation-reverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/pattern.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  animation: pattern-rotate 30s linear infinite;
+}
+
+@keyframes pattern-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes pattern-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    #4a2163 25%,
+    #8543af 25%,
+    #8543af 50%,
+    #4a2163 50%,
+    #4a2163 75%,
+    #8543af 75%,
+    #8543af
+  );
+  background-size: 100px 100px;
+  animation: bg-slide 20s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes bg-slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+.animated-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: pulse-circle 4s infinite;
+}
+
+.animated-circle:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+}
+
+.animated-circle:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  animation-delay: 1s;
+}
+
+.animated-circle:nth-child(3) {
+  width: 250px;
+  height: 250px;
+  animation-delay: 2s;
+}
+
+@keyframes pulse-circle {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.light-beam {
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  width: 100%;
+  height: 40px;
+  animation: light-sweep 8s infinite linear;
+}
+
+@keyframes light-sweep {
+  0% {
+    transform: translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateY(1000%) rotate(45deg);
+  }
+}
+
+.floating-particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  padding: clamp(1rem, 3vw, 2rem) !important;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  overflow: hidden;
+  border-radius: 0;
+  display: block;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #8543af;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  background-color: transparent !important;
+}
+
+.nav-menu ul li a:hover {
+  background-color: transparent !important;
+}
+
+#mobile-menu a:hover {
+  background-color: transparent !important;
+}
+
+.hero-section {
+  position: relative;
+  background-color: #5f2b7e;
+  height: clamp(180px, 30vw, 350px) !important;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  will-change: auto;
+  
+  @media screen and (max-width: 480px) {
+    opacity: 0.8;
+  }
+}
+.logo-container {
+  height: 60px !important;
+  overflow: hidden;
+}
+
+/* Improved Responsive Styles */
+@media screen and (max-width: 900px) {
+  .logo-size-iraq {
+    width: 100px;
+  }
+
+  .logo-size-codeavour {
+    width: 140px;
+  }
+
+  .section-container {
+    padding: 1rem;
+  }
+
+  .download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding-top: 4rem;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu ul {
+    padding: 1rem;
+  }
+
+  .nav-menu li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .section-container {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    height: 220px !important;
+  }
+
+  .hero-section img {
+    width: 260px !important;
+  }
+
+  .download-btn {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    justify-content: center;
+  }
+
+  .glass-card {
+    padding: 1rem !important;
+  }
+
+  .gallery-image {
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  iframe {
+    height: auto;
+  }
+}
+
+/* Fix for very small screens */
+@media screen and (max-width: 380px) {
+  .logo-size-iraq {
+    width: 80px;
+  }
+
+  .logo-size-codeavour {
+    width: 100px;
+  }
+
+  .hero-section {
+    height: 180px !important;
+  }
+
+  .hero-section img {
+    width: 160px !important;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Fix for tablets and medium screens */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .glass-card {
+    padding: 1.5rem !important;
+  }
+
+  .flex-col.md\:flex-row {
+    gap: 1.5rem !important;
+  }
+
+  .section-container {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Fix for navigation overlapping on small screens */
+@media screen and (max-width: 768px) {
+  header .container {
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Fix overflowing elements */
+.section-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Ensure content doesn't overflow horizontally */
+.content-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Improve button layout on small screens */
+@media screen and (max-width: 600px) {
+  .flex.flex-col.sm\:flex-row {
+    flex-direction: column !important;
+  }
+
+  iframe {
+    max-height: 200px;
+  }
+}
+
+/* Ensure only one close button is visible */
+#mobile-menu button:not(:first-of-type),
+#mobile-menu .close-menu:not(:first-of-type),
+.dynamically-added-close:not(:first-of-type) {
+  display: none !important;
+}
+
+.nav-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(80%, 350px);
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding-top: 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  visibility: visible;
+}
+
+.nav-menu.active {
+  right: 0;
+  max-width: 100vw;
+  visibility: visible;
+}
+
+/* Fix hamburger menu styling */
+.hamburger {
+  z-index: 200;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hidden-desktop {
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.close-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f2b7e;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.close-menu:hover {
+  transform: rotate(90deg);
+}
+
+/* Ensure menu links are clickable with proper spacing */
+.nav-menu ul {
+  padding: 1rem;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #5f2b7e;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(95, 43, 126, 0.1);
+}
+
+/* Fix for iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+  .nav-menu {
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+
+  body.menu-open {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* Improve layout spacing */
+@media screen and (max-width: 480px) {
+  .py-8.px-4.sm\:py-16 {
+    padding: 1rem 0.5rem !important;
+  }
+
+  .mt-8 {
+    margin-top: 1rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Responsive image fixes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  padding: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+/* Fix for mobile menu scrolling */
+#mobile-menu {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive container fix */
+.container {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+  padding-inline: clamp(0.5rem, 2vw, 2rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: none;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Center content better on mobile */
+@media screen and (max-width: 640px) {
+  .flex.flex-col.md\:flex-row.gap-6.items-center.justify-center {
+    text-align: center;
+  }
+
+  .w-full.md\:w-1\/3.flex.justify-center {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Fluid typography */
+h1 {
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2vw + 0.8rem, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 1.5vw + 0.7rem, 1.75rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 1vw + 0.6rem, 1.1rem);
+}
+
+/* Responsive grid layouts using CSS Grid */
+.grid {
+  display: grid;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+}
+
+/* Flexbox for flexible layouts */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* Fluid buttons */
+.download-btn {
+  transition: all 0.3s ease;
+  background-color: rgba(95, 43, 126, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: clamp(0.5rem, 1vw + 0.3rem, 1rem) clamp(1rem, 2vw + 0.5rem, 2rem);
+  font-size: clamp(0.8rem, 1vw + 0.4rem, 1rem);
+  width: min(100%, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for better layout */
+/* Removing duplicate container class definition */
+/* .container {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+  padding-inline: clamp(0.5rem, 2vw, 2rem);
+  box-sizing: border-box;
+  overflow: visible;
+} */
+
+/* Mobile menu with better positioning */
+.nav-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(80%, 350px);
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding-top: 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  visibility: visible;
+}
+.nav-menu.active {
+  right: 0;
+  max-width: 100vw;
+  visibility: visible;
+}
+
+/* Responsive images using aspect-ratio */
+.gallery-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive iframe */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive glass cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  padding: clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* We still need some specific media queries for layout shifts */
+@media screen and (max-width: 768px) {
+  /* Mobile menu styles */
+  .hamburger {
+    display: block;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  /* Make multi-column layouts go to single column */
+  .flex-col-mobile {
+    flex-direction: column !important;
+  }
+}
+
+
+/* Keep a few essential media queries */
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+/* Fix hamburger menu styling */
+.hamburger {
+  z-index: 200;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.close-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f2b7e;
+  transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+  transform: rotate(90deg);
+}
+
+/* Ensure content doesn't overflow horizontally */
+.content-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Utility classes for flex layouts */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Add gap utility classes */
+.gap-sm {
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.gap-md {
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.gap-lg {
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Spacing utilities using clamp */
+.margin-y-sm {
+  margin-block: clamp(0.5rem, 1vw, 1rem);
+}
+
+.margin-y-md {
+  margin-block: clamp(1rem, 2vw, 2rem);
+}
+
+.margin-y-lg {
+  margin-block: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Ensure content doesn't overflow horizontally */
+.content-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* AOS animation fixes for footer */
+[data-aos] {
+  transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+  backface-visibility: hidden; /* Prevent flickering */
+}
+
+footer[data-aos],
+section:last-of-type[data-aos],
+.section-container:last-of-type[data-aos] {
+  overflow: visible !important;
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* Prevent page jump during AOS animations */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Fix animation flashing on mobile */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 600ms !important;
+  }
+
+  /* Ensure footer and last sections display properly */
+  footer,
+  section:last-of-type,
+  .section-container:last-of-type {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
+  }
+}
+
+/* Ensure last elements are always visible on iOS */
+@supports (-webkit-touch-callout: none) {
+  footer,
+  section:last-of-type,
+  .section-container:last-of-type {
+    opacity: 1 !important;
+    transform: none !important;
+    will-change: auto;
+  }
+}
+
+/* Add a gallery container with hidden overflow */
+.grid[style="overflow: hidden"] {
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 1.5rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .grid[style="overflow: hidden"] {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  background-color: rgba(95, 43, 126, 0.7);
+}
+
+.lightbox-close:hover {
+  background-color: rgba(133, 67, 175, 0.9);
+  transform: rotate(90deg);
+}
+
+/* Make gallery images clickable */
+.gallery-item {
+  cursor: pointer;
+}
+
+/* Theme icon styling */
+.theme-icon {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(95, 43, 126, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse-glow 3s infinite;
+}
+
+.theme-icon svg {
+  color: #5f2b7e;
+  filter: drop-shadow(0 2px 3px rgba(95, 43, 126, 0.3));
+}
+
+/* Project image hover effects matching gallery */
+.project-image-container {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-image-container:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-image {
+  transition: transform 0.3s ease;
+}
